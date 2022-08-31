@@ -1,0 +1,18 @@
+name: Artifact test
+
+on: [ push ]
+
+jobs:
+  artfifact-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - run: mkdir formmain
+      - name: Download artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: test-artifact-file
+          branch: main
+          path: frommain
+      - run: echo formmain/file.txt
