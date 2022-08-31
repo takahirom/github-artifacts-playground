@@ -14,5 +14,6 @@ jobs:
         with:
           name: test-artifact-file
           branch: main
+          workflow: check.yml
           path: frommain
       - run: echo formmain/file.txt
