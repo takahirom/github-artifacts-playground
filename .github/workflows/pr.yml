@@ -16,4 +16,4 @@ jobs:
           branch: main
           workflow: check.yml
           path: frommain
-      - run: cat formmain/file.txt
+      - run: cat frommain/file.txt
