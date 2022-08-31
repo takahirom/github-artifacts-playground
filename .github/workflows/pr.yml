@@ -1,6 +1,6 @@
-name: Artifact test
+name: Artifact pr
 
-on: [ push ]
+on: [ pull_request ]
 
 jobs:
   artfifact-test:
@@ -14,5 +14,6 @@ jobs:
         with:
           name: test-artifact-file
           branch: main
+          workflow: check.yml
           path: frommain
-      - run: echo formmain/file.txt
+      - run: cat frommain/file.txt
