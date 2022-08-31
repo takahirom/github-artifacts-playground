@@ -1,0 +1,16 @@
+name: Artifact test
+
+on: [push]
+
+jobs:
+  artfifact-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-artifact-file
+          path: |
+            file.txt
